@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>feedback</title>
+    <link rel="stylesheet" href="{% static 'styles/feed.css' %}" />
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+          <div class="new">
+            <form action="index.html" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="FHA" />
+                <h4>Food Hero Academia</h4>
+              </div>
+
+              <div class="heading">
+                <h2>feedback</h2>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <p>
+                    We value your opinion! Your feedback helps us improve our food waste management services and make a positive impact on our environment. If you have any comments, suggestions, or experiences you'd like to share, please feel free to let us know. Your insights are essential to our mission
+                    of reducing food waste and promoting sustainability.</p>
+              </div>
+              <br><br>
+             
+              <div class="input-field">
+                 <label for="feedback">Feedback</label>
+                 <textarea id="feedback" name="feedback" rows="5" required></textarea>
+              </div>
+            
+              <div>
+                 <input type="submit" value="Submit" />
+              </div>
+            </form>
+
+          
+
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+    </body>
+</html>

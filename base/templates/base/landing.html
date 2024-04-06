@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FHA</title>
+  <link rel="stylesheet" href="{% static 'styles/swiper-bundle.min.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/landing.css' %}">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-bar"> 
+      <a href="/login" class="logo"> <font color="white" >Food Hero Academia</font></a>
+      <div class="navigation">
+        <div class="nav-items">
+          <i class="uil uil-times nav-close-btn"></i>
+          <a href="#"><i class="uil uil-home"></i> Home</a>
+          <a href="{% url 'about' %}"><i class="uil uil-info-circle"></i> About</a>
+          <a href="{% url 'feed' %}"><i class="uil uil-document-layout-left"></i>Feedback</a>
+          <a href="{% url 'contact' %}"><i class="uil uil-envelope"></i> Contact</a>
+        </div>
+      </div>
+      <i class="uil uil-apps nav-menu-btn"></i>
+    </div>
+  </header>
+
+  <section class="home">
+    <div class="media-icons">
+      <a href="https://www.facebook.com/profile.php?id=61552761351255" target="blank"><i class="uil uil-facebook-f"></i></a>
+      <a href="https://www.instagram.com/food_hero009/" target="blank"><i class="uil uil-instagram"></i></a>
+      <a href="https://twitter.com/foodheroac83383" target="blank"><i class="uil uil-twitter"></i></a>
+    </div>
+
+    <div class="swiper bg-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="{% static 'images/2.jpg' %}" alt="" >
+          <div class="text-content">
+            <h2 class="title">NGO'S </h2>
+            <p>If your Non-profit organization,we will provide
+                you with hygineic food leftover from the grocery stores and Restaurants
+                to be able to provide back to the society.
+            </p>
+            <form action="{% url 'NGO' %}">
+            <button class="read-btn">Continue <i class="uil uil-arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="swiper-slide dark-layer">
+          <img  src="{% static 'images/1.jpg' %}" alt="">
+          <div class="text-content">
+            <h2 class="title">Restaurants </h2>
+            <p>If You run a Restaurant and have food items prepared, which are of no use to use,
+                give it to the ngo's to provide back to the society.  </p>
+            <form action="{% url 'restaurant' %}">
+            <button class="read-btn">Continue <i class="uil uil-arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="swiper-slide dark-layer">
+            <img src="{% static 'images/3.jpg' %}" alt="">
+            <div class="text-content">
+              <h2 class="title">Departmental Store</h2>
+              <p>If You run a Departmental Store and have items which are near to expire,
+                give it to the ngo's to provide back to the society.  </p>
+              <form action="{% url 'department' %}">
+              <button class="read-btn">Continue <i class="uil uil-arrow-right"></i></button>
+              </form>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+    <div class="bg-slider-thumbs">
+      <div class="swiper-wrapper thumbs-container">
+        <img src="{% static 'images/2.jpg' %}" class="swiper-slide" alt="">
+        <img src="{% static 'images/1.jpg' %}" class="swiper-slide" alt="">
+        <img src="{% static 'images/3.jpg' %}" class="swiper-slide" alt="">
+        
+      </div>
+    </div>
+  </section>
+
+  <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

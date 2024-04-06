@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'styles/ds.css' %}" />
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form method="POST" action="" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="FHA" />
+                <h4>Food Hero Academia</h4>
+              </div>
+
+              <div class="heading">
+                <h2>Input Form</h2>
+              </div>
+
+                {% csrf_token %}
+                <div class="actual-form">
+                  <div class="input-wrap">
+                    {{form.as_p}}
+                    <input
+                      type="text"
+                      minlength="4"
+                      class="input-field"
+                      autocomplete="off"
+                      required
+                    />
+                    <label>Item Name</label>
+                  </div>
+
+                  <div class="input-wrap">
+                    <input
+                      type="text"
+                      minlength="0"
+                      class="input-field"
+                      autocomplete="off"
+                      required
+                    />
+                    <label>Quantity</label>
+                  </div>
+
+                  <input type="submit" value="Send" class="sign-btn" />
+  
+                <p class="text">
+                  For help <a href="#">Get help</a> 
+                </p>
+              </div>
+            </form>
+
+            </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="{% static 'images/bg4.png' %}" class="image img-1 show" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>Sharing is not Caring</h2>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Javascript file -->
+
+    <script src="{% static 'js/ds.js' %}"></script>
+  </body>
+</html>
