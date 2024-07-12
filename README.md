@@ -1,2 +1,3 @@
-# E_Summit_Mavricks
+# Digital Solution for Food Waste Mnagement
+
  
